@@ -63,9 +63,26 @@ var Window = function(panelInstance, windowId) {
                 var coord = this.guiWindow.getBoundingClientRect();
                 this.guiWindow.style.left = ((event.clientX-this.cachedX)+coord.left)+"px";
                 this.guiWindow.style.top = ((event.clientY-this.cachedY)+coord.top)+"px";
-                this.cachedX = event.clientX;
-                this.cachedY = event.clientY;
+                if(this.guiWindow.getBoundingClientRect().top < 0) {
+                    this.guiWindow.style.top = 0+"px";
+                    this.cachedX = event.clientX;
+                } else {
+                    this.cachedX = event.clientX;
+                    this.cachedY = event.clientY;
+                }
             }
         }.bind(this));
+    }
+
+    this.setWidth = function(width) {
+        this.guiWindow.style.width = width+"px";
+    }
+
+    this.setHeight = function(height) {
+        this.guiWindow.style.height = height+"px";
+    }
+
+    this.setBackgroundColor = function(bgrcolor) {
+        this.guiWindow.querySelector(".gui-window__content").style.background = bgrcolor;
     }
 }

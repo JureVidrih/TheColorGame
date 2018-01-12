@@ -35,6 +35,13 @@
     min-height: 400px;
     width: 350px;
     height: 400px;
+
+    -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
 }
 
 .gui-window__titlebar {
@@ -63,12 +70,6 @@
             height: 24px;
             text-align: center;
             font-size: 1.2rem;
-            -webkit-touch-callout: none;
-            -webkit-user-select: none;
-            -khtml-user-select: none;
-            -moz-user-select: none;
-            -ms-user-select: none;
-            user-select: none;
         }
 
 .gui-window__content {
@@ -86,5 +87,5 @@
 }
 
 body {
-    background: #f4fcff;
+    background: deepskyblue;
 }

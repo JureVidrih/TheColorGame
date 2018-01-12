@@ -9,7 +9,8 @@ var Panel = function() {
     this.initialize = function() {
         var domObj = document.createElement("div");
         domObj.classList.add("gui-panel");
-        domObj.id = "pult";
+        domObj.id = "panelInstance1";
+        this.panelInstance = domObj.id;
         document.body.appendChild(domObj);
     }
 
