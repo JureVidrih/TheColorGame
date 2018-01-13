@@ -1,9 +1,12 @@
 var panel = new Panel();
 
-var gameWindow = new Window(panel, "The Color Game");
+var gameWindow = new Window(panel, "TheColorGameWindow");
 gameWindow.initialize();
-gameWindow.setWidth(1024);
-gameWindow.setHeight(768);
-gameWindow.setBackgroundColor("lightgray");
 
 panel.addAWindow(gameWindow);
+
+gameWindow.setWidth(1600);
+gameWindow.setHeight(900);
+gameWindow.setBackgroundColor("white");
+gameWindow.setTitle("The Color Game");
+gameWindow.setContent("Content goes here...");

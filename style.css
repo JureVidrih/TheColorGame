@@ -1,11 +1,7 @@
-@import 'themes/default/theme.css';
+@import 'themes/newtheme/theme';
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-body {
-    background: deepskyblue;
 }
