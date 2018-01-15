@@ -1,6 +1,6 @@
 var panel = new Panel();
-
 var gameWindow = new Window(panel, "TheColorGameWindow");
+
 gameWindow.initialize();
 
 panel.addAWindow(gameWindow);
