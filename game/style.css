@@ -1,0 +1,87 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat';
+
+#gameContent {
+    position: relative;
+    width: 100%;
+    height: 900px;
+    font-family: 'Montserrat';
+}
+
+.gameHeader {
+    width: 100%;
+    height: 285px;
+    background-color: LimeGreen;
+    padding: 15px 0 0 0;
+    text-align: center;
+    color: white;
+    font-size: 1.8rem;
+    transition: ease-out .3s;
+
+    #displayedResult {
+        margin-top: 25px;
+        font-size: 1.3rem;
+        font-weight: bold;
+        transition: ease-out .3s;
+        opacity: 0.0;
+    }
+}
+
+.colors {
+    margin: 15px auto 0 auto;
+    width: 800px;
+    text-align: center;
+}
+
+.colorObj {
+    display: inline-block;
+    width: 250px;
+    height: 250px;
+    border-radius: 15%;
+    background-color: red;
+    margin: 10px 5px 0 5px;
+    transition: ease-out 0.3s;
+
+    &--not-visible {
+        background-color: white;
+    }
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: 1px;
+    background-color: red;
+    color: white;
+    font-size: 1.35rem;
+    
+
+    #tryAgain {
+        position: absolute;
+        left: 1px;
+        bottom: 1px;
+        background-color: DarkSlateGray;
+        padding: 5px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    #difficultyPicker {
+        position: absolute;
+        right: 1px;
+        bottom: 1px;
+        background-color: DarkSlateGray;
+        padding: 5px;
+        border-radius: 5px;
+    }
+}
+
+#diffEasy {
+    font-weight: bold;
+    color: black;
+}
+
+#diffHard {
+    font-weight: bold;
+    color: white;
+}

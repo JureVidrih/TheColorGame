@@ -23,6 +23,7 @@ var Window = function(panelInstance, windowId) {
                             +'</div>';
         this.panel = domObj.getElementsByClassName("gui-panel")[0];
         this.guiWindow = domObj.querySelector(".gui-window");
+        this.titleBar = domObj.querySelector(".gui-window__titlebar");
         this.close = domObj.getElementsByClassName("window-btn-close")[0];
         this.min = domObj.getElementsByClassName("window-btn-minimize")[0];
         this.max = domObj.getElementsByClassName("window-btn-maximize")[0];
@@ -49,7 +50,7 @@ var Window = function(panelInstance, windowId) {
             }
         }.bind(this));
         
-        this.guiWindow.addEventListener('mousedown', function(event) {
+        this.titleBar.addEventListener('mousedown', function(event) {
             this.isBeingDragged = true;
             this.cachedX = event.clientX;
             this.cachedY = event.clientY;

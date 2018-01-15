@@ -7,7 +7,7 @@ var postcssNested = require('postcss-nested');
 var postcssVars = require('postcss-simple-vars');
 
 gulp.task('watch', function() {
-    watch(["style.css", "themes/**/*.css"], function() {
+    watch(["style.css", "themes/**/*.css", "game/**/*.css"], function() {
         gulp.start('styles');
     });
 });

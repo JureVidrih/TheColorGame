@@ -1,4 +1,5 @@
 @import 'themes/newtheme/theme';
+@import 'game/style';
 
 * {
     box-sizing: border-box;
