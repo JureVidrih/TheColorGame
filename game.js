@@ -3,6 +3,15 @@
 var panel = new Panel();
 var gameWindow = new Window(panel, "TheColorGameWindow");
 
+var colorObjects = document.querySelectorAll(".colorObj");
+var result = document.querySelector("#displayedResult");
+var displayedColor = document.querySelector("#headerRGBValue");
+var gameHeader = document.querySelector(".gameHeader");
+
+var tryAgain = document.querySelector("#tryAgain");
+var diffEasy = document.querySelector("#diffEasy");
+var diffHard = document.querySelector("#diffHard");
+
 // GAME FUNCTIONS
 
 function initGui() {
@@ -15,8 +24,8 @@ function initGui() {
     gameWindow.setBackgroundColor("white");
     gameWindow.setTitle("The Color Game");
     var gameContent = document.querySelector("#gameContent");
-    gameContent.remove();
     gameWindow.setContent(gameContent.outerHTML);
+    gameContent.remove();
 }
 
 function generateColors() {
@@ -41,49 +50,41 @@ function generateColors() {
 }
 
 function initEventListeners() {
-    var colorObjects = document.querySelectorAll(".colorObj");
-
     colorObjects.forEach(function(element, index) {
         element.addEventListener('click', function() {
-            var result = document.querySelector("#displayedResult");
             if(index != correctColor-1) {
                 result.textContent = "NOT CORRECT";
                 result.style.opacity = "1.0";
                 element.style.backgroundColor = "transparent";
             } else {
                 result.textContent = "";
-                document.querySelector(".gameHeader").style.backgroundColor = element.style.backgroundColor;
+                gameHeader.style.backgroundColor = element.style.backgroundColor;
                 newGame();
             }
         });
     });
 
-    var tryAgain = document.querySelector("#tryAgain");
-
     tryAgain.addEventListener('click', function() {
-        document.querySelector(".gameHeader").style.backgroundColor = "LimeGreen";
+        gameHeader.style.backgroundColor = "LimeGreen";
         newGame();
     });
-
-    var diffEasy = document.querySelector("#diffEasy");
-    var diffHard = document.querySelector("#diffHard");
 
     diffEasy.addEventListener('click', function() {
         if(difficulty == "hard") {
             difficulty = "easy";
             this.style.color = "gold";
             diffHard.style.color = "black";
-            document.querySelector(".gameHeader").style.backgroundColor = "LimeGreen";
+            gameHeader.style.backgroundColor = "LimeGreen";
             newGame();
         }
     });
-    
+
     diffHard.addEventListener('click', function() {
         if(difficulty == "easy") {
             difficulty = "hard";
             this.style.color = "gold";
             diffEasy.style.color = "black";
-            document.querySelector(".gameHeader").style.backgroundColor = "LimeGreen";
+            gameHeader.style.backgroundColor = "LimeGreen";
             newGame();
         }
     });
@@ -98,12 +99,10 @@ function newGame() {
     } else {
         correctColor = Math.floor(Math.random()*6+1);
     }
-    
-    console.log("Correct color is: " + correctColor);
-    
-    document.querySelector("#headerRGBValue").textContent = colors[correctColor-1].toUpperCase();
 
-    var colorObjects = document.querySelectorAll(".colorObj");
+    console.log("Correct color is: " + correctColor);
+
+    displayedColor.textContent = colors[correctColor-1].toUpperCase();
 
     for(i = 0; i < colorObjects.length; i++) {
         colorObjects[i].style.backgroundColor = colors[i];
