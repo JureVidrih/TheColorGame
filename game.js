@@ -71,7 +71,7 @@ function initEventListeners() {
     diffEasy.addEventListener('click', function() {
         if(difficulty == "hard") {
             difficulty = "easy";
-            this.style.color = "white";
+            this.style.color = "gold";
             diffHard.style.color = "black";
             document.querySelector(".gameHeader").style.backgroundColor = "LimeGreen";
             newGame();
@@ -81,7 +81,7 @@ function initEventListeners() {
     diffHard.addEventListener('click', function() {
         if(difficulty == "easy") {
             difficulty = "hard";
-            this.style.color = "white";
+            this.style.color = "gold";
             diffEasy.style.color = "black";
             document.querySelector(".gameHeader").style.backgroundColor = "LimeGreen";
             newGame();
