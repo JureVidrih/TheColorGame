@@ -4,11 +4,23 @@
     <meta charset="UTF-8">
     <title>The Color Game Project</title>
     <link rel="stylesheet" href="build/style.css">
-    <script src="engine/_panel-item.js"></script>
-    <script src="engine/_panel.js"></script>
-    <script src="engine/_window.js"></script>
+    <script src="engine/panel-item.js"></script>
+    <script src="engine/panel.js"></script>
+    <script src="engine/window.js"></script>
 </head>
 <body>
+    <div id="gameContent">
+        <div id="gameHeader">
+            <h1>The great</h1><h1 id="displayedColor">RGB(255, 0, 0)</h1><h1>guessing game.</h1><p id="displayedResult">NOT CORRECT</p>
+        </div>
+        <div id="colors">
+            <div class="colorObj"></div><div class="colorObj"></div><div class="colorObj"></div><div class="colorObj"></div><div class="colorObj"></div><div class="colorObj"></div>
+        </div>
+        <footer>
+            <div id="tryAgain">Try again?</div>
+            <div id="difficulty"><p><span id="diffEasy">EASY</span> &nbsp;<span id="diffHard">HARD</span></p></div>
+        </footer>
+    </div>
     <script src="game/game.js"></script>
 </body>
 </html>
