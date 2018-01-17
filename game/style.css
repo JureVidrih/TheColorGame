@@ -16,6 +16,8 @@
     font-weight: bold;
     text-align: center;
 
+    transition: ease-out .3s;
+
     #displayedResult {
         font-size: 1.15rem;
         margin-top: 30px;
@@ -37,6 +39,7 @@
     background-color: red;
     border-radius: 15%;
     margin: 0 10px 5px 10px;
+    transition: ease-out .3s;
 }
 
 footer {

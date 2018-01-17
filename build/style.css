@@ -140,6 +140,8 @@ a:focus {
     font-size: 1.45rem;
     font-weight: bold;
     text-align: center;
+
+    transition: ease-out .3s;
 }
 #gameHeader #displayedResult {
         font-size: 1.15rem;
@@ -159,6 +161,7 @@ a:focus {
     background-color: red;
     border-radius: 15%;
     margin: 0 10px 5px 10px;
+    transition: ease-out .3s;
 }
 footer {
     position: absolute;

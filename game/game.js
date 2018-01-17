@@ -3,6 +3,8 @@
 var panel = new Panel();
 var gameWindow = new Window(panel, "TheColorGameWindow");
 
+initGui();
+
 // DOM HANDLERS
 
 var gameHeader = document.querySelector("#gameHeader");
@@ -23,6 +25,20 @@ var correctColor = 0;
 var difficulty = "HARD";
 
 // GAME METHODS
+
+function initGui() {
+    gameWindow.initialize();
+
+    panel.addAWindow(gameWindow);
+
+    gameWindow.setWidth(1600);
+    gameWindow.setHeight(900);
+    gameWindow.setBackgroundColor("white");
+    gameWindow.setTitle("The Color Game");
+    var gameContent = document.querySelector("#gameContent");
+    gameWindow.setContent(gameContent.outerHTML);
+    gameContent.remove();
+}
 
 function generateColors() {
     var arr = [];
@@ -58,25 +74,51 @@ function newGame() {
     bgrColors = generateColors();
 
     displayedResult.style.opacity = 0.0;
+    displayedColor.textContent = bgrColors[correctColor].toUpperCase();
 
     for(i = 0; i < colorObjects.length; i++) {
         colorObjects[i].style.backgroundColor = bgrColors[i];
     }
 }
 
-function initGui() {
-    gameWindow.initialize();
+function bindEventListeners() {
 
-    panel.addAWindow(gameWindow);
+    colorObjects.forEach(function(element, index) {
+        element.addEventListener('click', function() {
+            if(correctColor == index) {
+                gameHeader.style.backgroundColor = bgrColors[index];
+                newGame();
+            } else {
+                element.style.backgroundColor = "transparent";
+            }
+        });
+    });
 
-    gameWindow.setWidth(1600);
-    gameWindow.setHeight(900);
-    gameWindow.setBackgroundColor("white");
-    gameWindow.setTitle("The Color Game");
-    var gameContent = document.querySelector("#gameContent");
-    gameWindow.setContent(gameContent.outerHTML);
-    gameContent.remove();
+    tryAgain.addEventListener('click', function() {
+        gameHeader.style.backgroundColor = "LimeGreen";
+        newGame();
+    });
+
+    diffEasy.addEventListener('click', function() {
+        if(difficulty == "HARD") {
+            difficulty = "EASY";
+            gameHeader.style.backgroundColor = "LimeGreen";
+            diffEasy.style.color = "gold";
+            diffHard.style.color = "black";
+            newGame();
+        }
+    });
+
+    diffHard.addEventListener('click', function() {
+        if(difficulty == "EASY") {
+            difficulty = "HARD";
+            gameHeader.style.backgroundColor = "LimeGreen";
+            diffHard.style.color = "gold";
+            diffEasy.style.color = "black";
+            newGame();
+        }
+    });
 }
 
-initGui();
+bindEventListeners();
 newGame();
