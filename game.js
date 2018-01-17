@@ -3,6 +3,8 @@
 var panel = new Panel();
 var gameWindow = new Window(panel, "TheColorGameWindow");
 
+initGui();
+
 var colorObjects = document.querySelectorAll(".colorObj");
 var result = document.querySelector("#displayedResult");
 var displayedColor = document.querySelector("#headerRGBValue");
@@ -126,6 +128,5 @@ var difficulty = "hard";
 var colors;
 var correctColor;
 
-initGui();
 initEventListeners();
 newGame();
