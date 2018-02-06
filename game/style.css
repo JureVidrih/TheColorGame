@@ -3,11 +3,11 @@
 #gameContent {
     position: relative;
     width: 100%;
-    height: 900px;
+    height: 100%;
     font-family: 'Montserrat';
 }
 
-.gameHeader {
+.gui-window--size-fullhd .gameHeader {
     width: 100%;
     height: 285px;
     background-color: LimeGreen;
@@ -26,16 +26,153 @@
     }
 }
 
-.colors {
+.gui-window--size-fullhd .gameHeader {
+    width: 100%;
+    height: 285px;
+    background-color: LimeGreen;
+    padding: 15px 0 0 0;
+    text-align: center;
+    color: white;
+    font-size: 1.8rem;
+    transition: ease-out .3s;
+
+    #displayedResult {
+        margin-top: 25px;
+        font-size: 1.3rem;
+        font-weight: bold;
+        transition: ease-out .3s;
+        opacity: 0.0;
+    }
+}
+
+.gui-window--size-hd .gameHeader {
+    width: 100%;
+    height: 200px;
+    background-color: LimeGreen;
+    padding: 10px 0 0 0;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+    transition: ease-out .3s;
+
+    #displayedResult {
+        margin-top: 13px;
+        font-size: 1.25rem;
+        font-weight: bold;
+        transition: ease-out .3s;
+        opacity: 0.0;
+    }
+}
+
+.gui-window--size-vga .gameHeader {
+    width: 100%;
+    height: 170px;
+    background-color: LimeGreen;
+    padding: 10px 0 0 0;
+    text-align: center;
+    color: white;
+    font-size: 1.0rem;
+    transition: ease-out .3s;
+
+    #displayedResult {
+        margin-top: 11px;
+        font-size: .95rem;
+        font-weight: bold;
+        transition: ease-out .3s;
+        opacity: 0.0;
+    }
+}
+
+.gui-window--size-qvga .gameHeader {
+    width: 100%;
+    height: 170px;
+    background-color: LimeGreen;
+    padding: 11px 0 0 0;
+    text-align: center;
+    color: white;
+    font-size: 1.0rem;
+    transition: ease-out .3s;
+
+    #displayedResult {
+        margin-top: 14px;
+        font-size: .90rem;
+        font-weight: bold;
+        transition: ease-out .3s;
+        opacity: 0.0;
+    }
+}
+
+.gui-window--size-fullhd .colors {
     margin: 15px auto 0 auto;
-    width: 800px;
+    width: 960px;
     text-align: center;
 }
 
-.colorObj {
+.gui-window--size-hd .colors {
+    margin: 15px auto 0 auto;
+    width: 860px;
+    text-align: center;
+}
+
+.gui-window--size-vga .colors {
+    margin: 15px auto 0 auto;
+    width: 450px;
+    text-align: center;
+}
+
+
+.gui-window--size-qvga .colors {
+    margin: 15px auto 0 auto;
+    width: 315px;
+    text-align: center;
+}
+
+.gui-window--size-fullhd .colorObj {
     display: inline-block;
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
+    border-radius: 15%;
+    background-color: red;
+    margin: 10px 10px 0 10px;
+    transition: ease-out 0.3s;
+
+    &--not-visible {
+        background-color: white;
+    }
+}
+
+.gui-window--size-hd .colorObj {
+    display: inline-block;
+    width: 275px;
+    height: 275px;
+    border-radius: 15%;
+    background-color: red;
+    margin: 10px 5px 0 5px;
+    transition: ease-out 0.3s;
+
+    &--not-visible {
+        background-color: white;
+    }
+}
+
+.gui-window--size-vga .colorObj {
+    display: inline-block;
+    width: 140px;
+    height: 140px;
+    border-radius: 15%;
+    background-color: red;
+    margin: 10px 5px 0 5px;
+    transition: ease-out 0.3s;
+
+    &--not-visible {
+        background-color: white;
+    }
+}
+
+.gui-window--size-qvga .colorObj {
+    display: inline-block;
+    width: 95px;
+    height: 95px;
     border-radius: 15%;
     background-color: red;
     margin: 10px 5px 0 5px;
@@ -54,6 +191,36 @@ footer {
     background-color: red;
     color: white;
     font-size: 1.35rem;
+    
+
+    #tryAgain {
+        position: absolute;
+        left: 1px;
+        bottom: 1px;
+        background-color: DarkSlateGray;
+        padding: 5px;
+        border-radius: 5px;
+        font-weight: bold;
+    }
+
+    #difficultyPicker {
+        position: absolute;
+        right: 1px;
+        bottom: 1px;
+        background-color: DarkSlateGray;
+        padding: 5px;
+        border-radius: 5px;
+    }
+}
+
+.gui-window--size-qvga footer {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    bottom: 1px;
+    background-color: red;
+    color: white;
+    font-size: 1.0rem;
     
 
     #tryAgain {

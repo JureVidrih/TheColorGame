@@ -22,9 +22,20 @@ function initGui() {
     panel.addAWindow(gameWindow);
 
     gameWindow.setWidth(1600);
-    gameWindow.setHeight(900);
+    gameWindow.setHeight(934);
+    gameWindow.setWindowX(0);
+    gameWindow.setWindowY(0);
     gameWindow.setBackgroundColor("white");
     gameWindow.setTitle("The Color Game");
+    gameWindow.getPanelItem().getContextMenu().addAnItem("Try Again?", function() {
+        newGame();
+    }).addASeparator().addAnItem("Hard difficulty", function() {
+        difficulty = "hard";
+        newGame();
+    }).addAnItem("Easy difficulty", function() {
+        difficulty = "easy";
+        newGame();
+    });
     var gameContent = document.querySelector("#gameContent");
     gameWindow.setContent(gameContent.outerHTML);
     gameContent.remove();
