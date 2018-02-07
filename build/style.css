@@ -335,26 +335,9 @@ a:focus {
 #gameContent {
     position: relative;
     width: 100%;
-    height: 100%;
+    height: 900px;
     font-family: 'Montserrat';
 }
-.gui-window--size-fullhd .gameHeader {
-    width: 100%;
-    height: 285px;
-    background-color: LimeGreen;
-    padding: 15px 0 0 0;
-    text-align: center;
-    color: white;
-    font-size: 1.8rem;
-    transition: ease-out .3s;
-}
-.gui-window--size-fullhd .gameHeader #displayedResult {
-        margin-top: 25px;
-        font-size: 1.3rem;
-        font-weight: bold;
-        transition: ease-out .3s;
-        opacity: 0.0;
-    }
 .gui-window--size-fullhd .gameHeader {
     width: 100%;
     height: 285px;
@@ -410,7 +393,7 @@ a:focus {
     width: 100%;
     height: 170px;
     background-color: LimeGreen;
-    padding: 11px 0 0 0;
+    padding: 15+1px 0 0 0;
     text-align: center;
     color: white;
     font-size: .95rem;
@@ -435,7 +418,7 @@ a:focus {
 }
 .gui-window--size-vga .colors {
     margin: 15px auto 0 auto;
-    width: 450px;
+    width: 80++450px;
     text-align: center;
 }
 .gui-window--size-qvga .colors {
@@ -450,6 +433,7 @@ a:focus {
     border-radius: 15%;
     background-color: red;
     margin: 10px 10px 0 10px;
+    transition: ease-out 0.3s;
 }
 .gui-window--size-fullhd .colorObj--not-visible {
         background-color: white;
@@ -461,6 +445,7 @@ a:focus {
     border-radius: 15%;
     background-color: red;
     margin: 10px 5px 0 5px;
+    transition: ease-out 0.3s;
 }
 .gui-window--size-hd .colorObj--not-visible {
         background-color: white;
@@ -472,6 +457,7 @@ a:focus {
     border-radius: 15%;
     background-color: red;
     margin: 10px 5px 0 5px;
+    transition: ease-out 0.3s;
 }
 .gui-window--size-vga .colorObj--not-visible {
         background-color: white;
@@ -483,6 +469,7 @@ a:focus {
     border-radius: 15%;
     background-color: red;
     margin: 10px 5px 0 5px;
+    transition: ease-out 0.3s;
 }
 .gui-window--size-qvga .colorObj--not-visible {
         background-color: white;
@@ -520,7 +507,7 @@ footer #difficultyPicker {
     bottom: 1px;
     background-color: red;
     color: white;
-    font-size: 1.0rem;
+    font-size: 1.15rem;
 }
 .gui-window--size-qvga footer #tryAgain {
         position: absolute;
