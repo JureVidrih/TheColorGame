@@ -413,7 +413,7 @@ a:focus {
     padding: 11px 0 0 0;
     text-align: center;
     color: white;
-    font-size: 1.0rem;
+    font-size: .95rem;
     transition: ease-out .3s;
 }
 .gui-window--size-qvga .gameHeader #displayedResult {
@@ -450,7 +450,6 @@ a:focus {
     border-radius: 15%;
     background-color: red;
     margin: 10px 10px 0 10px;
-    transition: ease-out 0.3s;
 }
 .gui-window--size-fullhd .colorObj--not-visible {
         background-color: white;
@@ -462,7 +461,6 @@ a:focus {
     border-radius: 15%;
     background-color: red;
     margin: 10px 5px 0 5px;
-    transition: ease-out 0.3s;
 }
 .gui-window--size-hd .colorObj--not-visible {
         background-color: white;
@@ -474,7 +472,6 @@ a:focus {
     border-radius: 15%;
     background-color: red;
     margin: 10px 5px 0 5px;
-    transition: ease-out 0.3s;
 }
 .gui-window--size-vga .colorObj--not-visible {
         background-color: white;
@@ -486,7 +483,6 @@ a:focus {
     border-radius: 15%;
     background-color: red;
     margin: 10px 5px 0 5px;
-    transition: ease-out 0.3s;
 }
 .gui-window--size-qvga .colorObj--not-visible {
         background-color: white;

@@ -90,7 +90,7 @@
     padding: 11px 0 0 0;
     text-align: center;
     color: white;
-    font-size: 1.0rem;
+    font-size: .95rem;
     transition: ease-out .3s;
 
     #displayedResult {
@@ -134,7 +134,6 @@
     border-radius: 15%;
     background-color: red;
     margin: 10px 10px 0 10px;
-    transition: ease-out 0.3s;
 
     &--not-visible {
         background-color: white;
@@ -148,7 +147,6 @@
     border-radius: 15%;
     background-color: red;
     margin: 10px 5px 0 5px;
-    transition: ease-out 0.3s;
 
     &--not-visible {
         background-color: white;
@@ -162,7 +160,6 @@
     border-radius: 15%;
     background-color: red;
     margin: 10px 5px 0 5px;
-    transition: ease-out 0.3s;
 
     &--not-visible {
         background-color: white;
@@ -176,7 +173,6 @@
     border-radius: 15%;
     background-color: red;
     margin: 10px 5px 0 5px;
-    transition: ease-out 0.3s;
 
     &--not-visible {
         background-color: white;
