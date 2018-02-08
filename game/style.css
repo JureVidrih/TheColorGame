@@ -3,7 +3,7 @@
 #gameContent {
     position: relative;
     width: 100%;
-    height: 900px;
+    height: 100%;
     font-family: 'Montserrat';
 }
 
@@ -68,7 +68,7 @@
     width: 100%;
     height: 170px;
     background-color: LimeGreen;
-    padding: 15+1px 0 0 0;
+    padding: 11px 0 0 0;
     text-align: center;
     color: white;
     font-size: .95rem;
@@ -97,7 +97,7 @@
 
 .gui-window--size-vga .colors {
     margin: 15px auto 0 auto;
-    width: 80++450px;
+    width: 450px;
     text-align: center;
 }
 
@@ -191,44 +191,4 @@ footer {
         padding: 5px;
         border-radius: 5px;
     }
-}
-
-.gui-window--size-qvga footer {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    bottom: 1px;
-    background-color: red;
-    color: white;
-    font-size: 1.15rem;
-    
-
-    #tryAgain {
-        position: absolute;
-        left: 1px;
-        bottom: 1px;
-        background-color: DarkSlateGray;
-        padding: 5px;
-        border-radius: 5px;
-        font-weight: bold;
-    }
-
-    #difficultyPicker {
-        position: absolute;
-        right: 1px;
-        bottom: 1px;
-        background-color: DarkSlateGray;
-        padding: 5px;
-        border-radius: 5px;
-    }
-}
-
-#diffEasy {
-    font-weight: bold;
-    color: black;
-}
-
-#diffHard {
-    font-weight: bold;
-    color: gold;
 }

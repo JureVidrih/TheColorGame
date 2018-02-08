@@ -27,15 +27,7 @@ function initGui() {
     gameWindow.setWindowY(0);
     gameWindow.setBackgroundColor("white");
     gameWindow.setTitle("The Color Game");
-    gameWindow.getPanelItem().getContextMenu().addAnItem("Try Again?", function() {
-        newGame();
-    }).addASeparator().addAnItem("Hard difficulty", function() {
-        difficulty = "hard";
-        newGame();
-    }).addAnItem("Easy difficulty", function() {
-        difficulty = "easy";
-        newGame();
-    });
+    gameWindow.setWindowIcon("themes/newtheme/assets/icons/default.png");
     var gameContent = document.querySelector("#gameContent");
     gameWindow.setContent(gameContent.outerHTML);
     gameContent.remove();
