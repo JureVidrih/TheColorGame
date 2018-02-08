@@ -28,6 +28,22 @@ function initGui() {
     gameWindow.setBackgroundColor("white");
     gameWindow.setTitle("The Color Game");
     gameWindow.setWindowIcon("themes/newtheme/assets/icons/default.png");
+    gameWindow.getPanelItem().getContextMenu().addAnItem("Try again?", function() {
+        gameHeader.style.backgroundColor = "LimeGreen";
+        newGame();
+    }).addASeparator().addAnItem("Hard mode", function() {
+        difficulty = "hard";
+        diffEasy.style.color = "black";
+        diffHard.style.color = "gold";
+        gameHeader.style.backgroundColor = "LimeGreen";
+        newGame();
+    }).addAnItem("Easy mode", function() {
+        difficulty = "easy";
+        diffHard.style.color = "black";
+        diffEasy.style.color = "gold";
+        gameHeader.style.backgroundColor = "LimeGreen";
+        newGame();
+    });
     var gameContent = document.querySelector("#gameContent");
     gameWindow.setContent(gameContent.outerHTML);
     gameContent.remove();
