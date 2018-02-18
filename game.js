@@ -22,7 +22,7 @@ function initGui() {
     panel.addAWindow(gameWindow);
 
     gameWindow.setWidth(1200);
-    gameWindow.setHeight(934);
+    gameWindow.setHeight(600);
     gameWindow.setWindowX(0);
     gameWindow.setWindowY(0);
     gameWindow.setBackgroundColor("white");
