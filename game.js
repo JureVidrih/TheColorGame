@@ -21,7 +21,7 @@ function initGui() {
 
     panel.addAWindow(gameWindow);
 
-    gameWindow.setWidth(1600);
+    gameWindow.setWidth(1200);
     gameWindow.setHeight(934);
     gameWindow.setWindowX(0);
     gameWindow.setWindowY(0);
@@ -120,8 +120,6 @@ function newGame() {
     } else {
         correctColor = Math.floor(Math.random()*6+1);
     }
-
-    console.log("Correct color is: " + correctColor);
 
     displayedColor.textContent = colors[correctColor-1].toUpperCase();
 
