@@ -282,7 +282,7 @@ a:focus {
         top: 30px;
         bottom: 0;
         background-color: white;
-        overflow: hidden;
+        overflow: auto;
     }
 
     #nw-resize-wrapper {

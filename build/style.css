@@ -270,7 +270,7 @@ a:focus {
         top: 30px;
         bottom: 0;
         background-color: white;
-        overflow: hidden;
+        overflow: auto;
     }
 .gui-window #nw-resize-wrapper {
         position: absolute;
@@ -333,9 +333,6 @@ a:focus {
         cursor: se-resize;
     }
 #gameContent {
-    position: relative;
-    width: 100%;
-    height: 100%;
     font-family: 'Montserrat';
 }
 .gui-window--size-fullhd .gameHeader {
@@ -493,32 +490,6 @@ footer #tryAgain {
         font-weight: bold;
     }
 footer #difficultyPicker {
-        position: absolute;
-        right: 1px;
-        bottom: 1px;
-        background-color: DarkSlateGray;
-        padding: 5px;
-        border-radius: 5px;
-    }
-.gui-window--size-qvga footer {
-    position: absolute;
-    width: 100%;
-    height: auto;
-    bottom: 1px;
-    background-color: red;
-    color: white;
-    font-size: 1.15rem;
-}
-.gui-window--size-qvga footer #tryAgain {
-        position: absolute;
-        left: 1px;
-        bottom: 1px;
-        background-color: DarkSlateGray;
-        padding: 5px;
-        border-radius: 5px;
-        font-weight: bold;
-    }
-.gui-window--size-qvga footer #difficultyPicker {
         position: absolute;
         right: 1px;
         bottom: 1px;
